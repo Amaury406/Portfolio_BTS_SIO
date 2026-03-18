@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+    <meta charset="UTF-8">
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Portfolio BTS SIO - Amaury</title>
+    
+    
+    <link rel="stylesheet" href="style.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header class="header">
+        <div class="container">
+          
+            <div class="logo">
+                <i class="fas fa-code"></i>
+                <span>Portfolio BTS SIO</span>
+            </div>
+            
+           
+            <nav class="navbar">
+           
+                <a href="#accueil" class="nav-link active">
+                     Accueil
+                </a>
+                <a href="#projets" class="nav-link">
+                    Projets
+                </a>
+                <a href="#competences" class="nav-link">
+                     Compétences
+                </a>
+                <a href="#stages" class="nav-link">
+                     Stages
+                </a>
+                <a href="#veille" class="nav-link">
+                     Veille
+                </a>
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
+            </nav>
+            
+         
+            <button class="menu-mobile-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    
+   
+    <section id="accueil" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+             
+                <h1 class="hero-title">
+                    Bonjour, je suis <span class="highlight">Amaury Delebecque</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Étudiant en <strong>BTS SIO</strong> (Services Informatiques aux Organisations)
+                </p>
+                <p class="hero-description">
+                    Option <span class="badge">SLAM</span> 
+                    <br>
+                  
+                </p>
+                
+              
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> Voir mes projets
+                    </a>
+                    <a href="assets/pdf/cv.pdf" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-download"></i> Télécharger mon CV
+                    </a>
+                </div>
+            </div>
+            
+          
+            <div class="hero-image">
+                
+                <div class="image-wrapper">
+                    <img src="cadeau.webp" alt="Photo de profil">
+                    <div class="status-badge">
+                        <div class="dot"></div>
+                        <span>Disponible</span>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+ 
+    <section id="projets" class="section">
+        <div class="container">
+        
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i> Mes projets BTS SIO
+                </h2>
+                <p class="section-subtitle">
+                    Découvrez mes réalisations en développement web et applications
+                </p>
+            </div>
+            
+            <!-- Grille de projets - 3 emplacements -->
+            <div class="projets-grid" id="projetsGrid">
+                
+                <!-- PROJET 1 : Combat de Guildes (déjà rempli) -->
+                <div class="projet-card">
+                    <div class="projet-content" style="padding: 1.5rem;">
+                        
+                        <h3 class="projet-titre">
+                             Combat de Guildes
+                        </h3>
+                        <p class="projet-description">
+                            Jeu de combat au tour par tour développé en Python avec interface graphique Tkinter. 
+                            Deux joueurs composent leur guilde et s'affrontent 
+                            avec système d'expérience et persistance des données.
+                        </p>
+                        
+                        <div class="projet-techs">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">POO</span>
+                        </div>
+                        
+                        <div class="projet-links" style="margin-top: 1rem;">
+                            <a href="https://github.com/Amaury406/RPG_GAME_Python.git" target="_blank" class="btn-projet">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET 2 : Emplacement vide pour ton prochain projet -->
+                <div class="projet-card">
+                    <div class="projet-content" style="padding: 1.5rem;">
+                       
+                        <h3 class="projet-titre">
+                             Todo-List React
+                        </h3>
+                        <p class="projet-description">
+                            Développement d'une application web interactive permettant de gérer ses tâches quotidiennes.
+                             L'utilisateur peut ajouter, modifier, supprimer des tâches et visualiser la liste complète avec un compteur. 
+                             Les données sont automatiquement sauvegardées dans le navigateur.
+                        </p>
+                        
+                        <div class="projet-techs">
+                            <span class="tech-tag">React18</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Hooks(usestate)</span>
+                              <span class="tech-tag">Git</span>
+                                <span class="tech-tag">Vercel</span>
+                        </div>
+                        
+                        <div class="projet-links" style="margin-top: 1rem;">
+                            <a href="#" target="_blank" class="btn-projet">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJET 3 : Emplacement vide pour ton autre projet -->
+                <div class="projet-card">
+                    <div class="projet-content" style="padding: 1.5rem;">
+                        <div class="projet-date" style="margin-bottom: 0.5rem;">
+                            <i class="far fa-calendar-alt"></i> À venir
+                        </div>
+                        <h3 class="projet-titre">
+                            <i class="fas fa-code"></i> Titre du projet 3
+                        </h3>
+                        <p class="projet-description">
+                            Description de ton troisième projet. Tu pourras mettre ici les détails 
+                            de ta prochaine réalisation.
+                        </p>
+                        
+                        <div class="projet-techs">
+                            <span class="tech-tag">Tech1</span>
+                            <span class="tech-tag">Tech2</span>
+                            <span class="tech-tag">Tech3</span>
+                        </div>
+                        
+                        <div class="projet-links" style="margin-top: 1rem;">
+                            <a href="#" target="_blank" class="btn-projet">
+                                <i class="fab fa-github"></i> Voir sur GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+   
+    <section id="competences" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-bar"></i> Mes Compétences
+                </h2>
+            </div>
+            
+           
+            <div class="competence-categorie">
+                <h3 class="categorie-title">
+                    <i class="fas fa-code"></i> Développement
+                </h3>
+                <div class="competence-items">
+                   
+                    <div class="competence-item" data-niveau="85">
+                        <div class="competence-info">
+                            <span class="competence-nom">HTML5 / CSS3</span>
+                            <span class="competence-pourcent">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="competence-item" data-niveau="75">
+                        <div class="competence-info">
+                            <span class="competence-nom">JavaScript</span>
+                            <span class="competence-pourcent">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                   
+                    <div class="competence-item" data-niveau="70">
+                        <div class="competence-info">
+                            <span class="competence-nom">PHP</span>
+                            <span class="competence-pourcent">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="competence-item" data-niveau="80">
+                        <div class="competence-info">
+                            <span class="competence-nom">MySQL</span>
+                            <span class="competence-pourcent">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="competence-categorie">
+                <h3 class="categorie-title">
+                    <i class="fas fa-tools"></i> Outils & Technologies
+                </h3>
+                <div class="outils-grid">
+                   
+                   
+                    
+                    <div class="outil-item">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </div>
+                    
+                    <div class="outil-item">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                 
+                    <div class="outil-item">
+                        <i class="fas fa-server"></i>
+                        <span>XAMPP/WAMP</span>
+                    </div>
+                    
+                    <!-- Ajout de Python dans les outils -->
+                    <div class="outil-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stages" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i> Mes Stages & Expériences
+                </h2>
+            </div>
+            
+            <div class="timeline">
+              
+                <div class="timeline-item">
+                    <div class="timeline-date">Janv - Fév 2024</div>
+                    <div class="timeline-content">
+                        <h3>Stage de 1ère année - Développeur Web</h3>
+                        <h4>Clinique Saint-Hilaire, Rouen</h4>
+                        <ul>
+                            <li>Développement d'une application de gestion interne</li>
+                            <li>Création d'une base de données MySQL</li>
+                            <li>Interface administrateur en PHP</li>
+                            <li>Tests et débuggage</li>
+                        </ul>
+                        <div class="technos-stage">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Mai - Juin 2024</div>
+                    <div class="timeline-content">
+                        <h3>Alternance en seconde année</h3>
+                        <h4>Clinique Saint-Hilaire</h4>
+                        <p>Mise à jour d'un site répertoriant les différentes fiches de paie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="veille" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                 Veille Technologique
+                </h2>
+                <p class="section-subtitle">
+                    Ma veille sur les dernières tendances et technologies
+                </p>
+            </div>
+            
+            <div class="veille-container">
+               
+                <div class="veille-categorie">
+                    <h3 class="categorie-title">
+                        <i class="fas fa-robot"></i> Intelligence Artificielle & Développement
+                    </h3>
+                    <div class="veille-items">
+                        <div class="veille-item">
+                            <div class="veille-date">Mars 2024</div>
+                            <h4>GitHub Copilot</h4>
+                            <p>Évolution de l'IA dans l'aide au développement et la productivité des développeurs.</p>
+                            <div class="veille-source">
+                                <i class="fas fa-link"></i>
+                                <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a>
+                            </div>
+                        </div>
+                        
+                        <div class="veille-item">
+                            <div class="veille-date">Février 2024</div>
+                            <h4>React 19</h4>
+                            <p>Nouvelles fonctionnalités et améliorations de performances du framework React.</p>
+                            <div class="veille-source">
+                                <i class="fas fa-link"></i>
+                                <a href="https://react.dev/blog" target="_blank">React Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="veille-categorie">
+                    <h3 class="categorie-title">
+                        <i class="fas fa-shield-alt"></i> Cybersécurité
+                    </h3>
+                    <div class="veille-items">
+                        <div class="veille-item">
+                            <div class="veille-date">Avril 2024</div>
+                            <h4>Nouvelles menaces IoT</h4>
+                            <p>Augmentation des attaques sur les objets connectés et bonnes pratiques de sécurisation.</p>
+                            <div class="veille-source">
+                                <i class="fas fa-link"></i>
+                                <a href="https://www.cert.ssi.gouv.fr" target="_blank">ANSSI</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i> Contact
+                </h2>
+                <p class="section-subtitle">
+                    N'hésitez pas à me contacter pour plus d'informations
+                </p>
+            </div>
+            
+            <div class="contact-wrapper">
+            
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:amaurydelebecque@gmail.com">amaurydelebecque@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33614931345">+33 6 14 93 13 45</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localisation</h4>
+                            <p>Rouen, France</p>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="social-links">
+                    <h3>Mes réseaux</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Amaury406/" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/amaury-delebecque-a812b5342/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+               
+                <div class="footer-section">
+                   
+                    <p>Réalisé avec HTML, CSS et JavaScript</p>
+                </div>
+                
+              
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <a href="#accueil">Accueil</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#stages">Stages</a>
+                    <a href="#veille">Veille</a>
+                </div>
+                
+                
+                <div class="footer-section">
+                    <h4>Formation</h4>
+                    <p>BTS SIO - Lycée IRIS</p>
+                    <p>Option SLAM</p>
+                </div>
+            </div>
+            
+            
+            <div class="back-to-top">
+                <a href="#accueil" id="backToTop">
+                    <i class="fas fa-arrow-up"></i>
+                    Retour en haut
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
