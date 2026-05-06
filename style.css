@@ -880,6 +880,226 @@ ul { list-style: none; }
   text-underline-offset: 3px;
 }
 
+/* ============================================================
+   STYLES POUR LE RENDU VEILLE & MODAL (AGRANDIS)
+   ============================================================ */
+
+/* Conteneur de l'image cliquable - plus grand */
+.veille-rendu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+/* Carte cliquable pour le rendu - TAILLE AGRANDIE */
+.rendu-card {
+  position: relative;
+  max-width: 900px;  /* Augmenté de 600px à 900px */
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s var(--ease);
+  background: var(--white);
+}
+
+.rendu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.rendu-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s var(--ease);
+}
+
+.rendu-card:hover .rendu-image {
+  transform: scale(1.02);
+}
+
+/* Overlay au survol */
+.rendu-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: white;
+  padding: 1.5rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transform: translateY(100%);
+  transition: transform 0.35s var(--ease);
+}
+
+.rendu-card:hover .rendu-overlay {
+  transform: translateY(0);
+}
+
+.rendu-overlay i {
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.2);
+  padding: 0.6rem;
+  border-radius: var(--r-full);
+}
+
+.rendu-overlay span {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Modal (fenêtre modale) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 1100;
+  justify-content: center;
+  align-items: center;
+  animation: modalFadeIn 0.3s var(--ease);
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  to {
+    opacity: 1;
+    backdrop-filter: blur(8px);
+  }
+}
+
+.modal-content {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  max-width: 900px;  /* Augmenté de 800px à 900px */
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem 2rem 2rem 2rem;
+  position: relative;
+  animation: modalSlideIn 0.35s var(--ease);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(37,99,235,0.15);
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Bouton de fermeture */
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--ink-muted);
+  transition: all 0.2s var(--ease);
+  z-index: 10;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--blue);
+  transform: scale(1.1);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 2px solid var(--blue-light);
+  padding-bottom: 0.75rem;
+}
+
+.modal-title i {
+  font-size: 1.3rem;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 0.5rem;
+  border-radius: var(--r-md);
+}
+
+.modal-image-container {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  background: var(--surface);
+  border-radius: var(--r-lg);
+  padding: 1rem;
+  border: 1px solid var(--border);
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--r-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease);
+}
+
+.modal-image:hover {
+  transform: scale(1.02);
+}
+
+.modal-description {
+  line-height: 1.75;
+  color: var(--ink-mid);
+  font-size: 0.9rem;
+  background: var(--surface);
+  padding: 1.25rem;
+  border-radius: var(--r-lg);
+  border-left: 3px solid var(--blue);
+}
+
+.modal-description strong {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+/* Personnalisation du scroll dans la modal */
+.modal-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: var(--r-full);
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--border-mid);
+  border-radius: var(--r-full);
+}
+
 /* ── CONTACT ──────────────────────────────────────────────── */
 .contact-wrapper {
   display: grid;
@@ -1104,6 +1324,11 @@ ul { list-style: none; }
   .hero-section .container { grid-template-columns: 1fr; text-align: center; }
   .hero-buttons { justify-content: center; }
   .highlight::after { left: 50%; transform: translateX(-50%); width: 80%; }
+  
+  /* Ajustement responsive pour la carte agrandie */
+  .rendu-card {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1143,6 +1368,25 @@ ul { list-style: none; }
   .timeline::before { left: 14px; }
   .timeline-item { padding-left: 50px; }
   .timeline-item::before { left: 7px; width: 15px; height: 15px; }
+
+  /* Responsive modal */
+  .modal-content {
+    padding: 1.5rem;
+    width: 92%;
+  }
+  
+  .modal-title {
+    font-size: 1.3rem;
+  }
+  
+  .veille-rendu-container {
+    padding: 1rem;
+  }
+  
+  /* Ajustement carte responsive */
+  .rendu-card {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1150,7 +1394,150 @@ ul { list-style: none; }
   .section-title { font-size: 1.9rem; flex-direction: column; gap: 0.4rem; }
   .btn { width: 100%; justify-content: center; }
   .hero-buttons { flex-direction: column; }
-  .outils-grid { grid-template-columns: repeat(2, 1fr); }
+  .outils-grid { grid-template-columns:  repeat(2, 1fr); }
   .veille-categorie { padding: 1.25rem; }
   .navbar { left: 0.75rem; right: 0.75rem; }
+  
+  .modal-title {
+    font-size: 1.1rem;
+  }
+  
+  .modal-description {
+    font-size: 0.8rem;
+    padding: 0.9rem;
+  }
+  /* NOTE: This file contains the original portfolio CSS.
+   For the complete original styles, use your existing style.css file.
+   Add the following rules at the END of your style.css */
+/* ── MENTIONS LÉGALES — styles complets ─────────────────────── */
+
+/* Barre légale dans le footer */
+.footer-legal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1.2rem var(--gap-md);
+  border-top: 1px solid rgba(255,255,255,0.07);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.15);
+}
+
+.legal-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+  transition: color 0.2s var(--ease);
+  cursor: pointer;
+}
+
+.legal-link:hover { color: var(--blue-mid); }
+
+.legal-separator {
+  color: rgba(255,255,255,0.2);
+}
+
+/* Header du modal légal */
+.modal-header-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--blue-light);
+}
+
+.modal-header-legal i {
+  font-size: 1.4rem;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 0.6rem;
+  border-radius: var(--r-md);
+}
+
+.modal-header-legal h2 {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+/* Grille de sections légales */
+.legal-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.legal-section {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.legal-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.legal-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 0.65rem;
+}
+
+.legal-section h3 i {
+  font-size: 0.85rem;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 0.3rem;
+  border-radius: var(--r-sm);
+  opacity: 0.85;
+}
+
+.legal-section p {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  line-height: 1.8;
+}
+
+.legal-section a {
+  color: var(--blue);
+  font-weight: 500;
+  transition: opacity 0.2s;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-section a:hover { opacity: 0.7; }
+
+.legal-section code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--blue-light);
+  color: var(--blue-dark);
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(37,99,235,0.12);
+}
+
+/* Responsive modal légal */
+@media (max-width: 480px) {
+  .modal-header-legal h2 { font-size: 1.3rem; }
+  .legal-modal-content { padding: 1.25rem; }
+  .footer-legal { flex-direction: column; gap: 0.4rem; text-align: center; }
+}
+
 }
